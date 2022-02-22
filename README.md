@@ -1,4 +1,4 @@
-# TLoL Scraper (LViewLoL - Fork)
+# TLoL Scraper
 
 ## About
 
