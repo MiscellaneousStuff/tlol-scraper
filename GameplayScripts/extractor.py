@@ -12,7 +12,7 @@ set_replay = False
 
 lview_script_info = {
 	"script": "Extractor",
-	"author": "leryss",
+	"author": "MiscellaneousStuff",
 	"description": "Extracts observations for machine learning."
 }
 
