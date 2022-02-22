@@ -34,6 +34,29 @@ public:
 	static int ObjItemList;
 	static int ObjSrcIndex;
 
+	static int ObjMissileName;
+	static int ObjMissileSpellCast;
+	static int ObjMaxMana;
+	static int ObjRecallState;
+	static int ObjAbilityHaste;
+	static int ObjLethality;
+	static int ObjBonusArmor;
+	static int ObjBonusMagicRes;
+	static int ObjTransformation;
+	static int ObjAtkRange;
+	static int ObjExperience;
+	static int ObjMagicPen;
+	static int ObjMagicPenMulti;
+	static int ObjAdditionalApMulti;
+	static int ObjManaRegen;
+	static int ObjHealthRegen;
+	static int ObjCurrentGold;
+	static int ObjGoldTotal;
+	static int ObjTargetable;
+	static int ObjInvulnerable;
+	static int ObjIsMoving;
+	static int ObjDirection;
+
 	static int ItemListItem;
 	static int ItemInfo;
 	static int ItemInfoId;
