@@ -82,7 +82,26 @@ public:
 	DWORD                 address;
 				          
 	UnitInfo*             unitInfo = GameData::UnknownUnit;
-						 
+	
+	// Additional
+	float				  abilityHaste;
+	float				  lethality;
+	float				  direction;
+	float				  experience;
+	float				  manaRegen;
+	float				  healthRegen;
+	float				  maxMana;
+	float				  mana;
+	float				  transformation;
+	bool                  isMoving;
+	// bool                  isDashing;
+	bool                  targetable;
+	bool				  invulnerable;
+	int  				  recallState;
+	float				  currentGold;
+	float				  totalGold;
+	float				  attackRange;
+
 protected:				 
 	static const SIZE_T   sizeBuff     = 0x4000;
 	static const SIZE_T   sizeBuffDeep = 0x1000;

@@ -116,6 +116,24 @@ void GameObject::LoadFromMem(DWORD base, HANDLE hProcess, bool deepLoad) {
 	memcpy(&movementSpeed, &buff[Offsets::ObjMoveSpeed],     sizeof(float));
 	memcpy(&networkId,     &buff[Offsets::ObjNetworkID],     sizeof(DWORD));
 
+	// Additional  
+	memcpy(&abilityHaste, &buff[Offsets::ObjAbilityHaste], sizeof(float));
+	memcpy(&lethality, &buff[Offsets::ObjLethality], sizeof(float));
+	memcpy(&direction, &buff[Offsets::ObjDirection], sizeof(float));
+	memcpy(&experience, &buff[Offsets::ObjExperience], sizeof(float));
+	memcpy(&manaRegen, &buff[Offsets::ObjManaRegen], sizeof(float));
+	memcpy(&healthRegen, &buff[Offsets::ObjHealthRegen], sizeof(float));
+	memcpy(&maxMana, &buff[Offsets::ObjMaxMana], sizeof(float));
+	memcpy(&mana, &buff[Offsets::ObjMana], sizeof(float));
+	memcpy(&transformation, &buff[Offsets::ObjTransformation], sizeof(float));
+	memcpy(&isMoving, &buff[Offsets::ObjIsMoving], sizeof(bool));
+	memcpy(&targetable, &buff[Offsets::ObjTargetable], sizeof(bool));
+	memcpy(&invulnerable, &buff[Offsets::ObjInvulnerable], sizeof(bool));
+	memcpy(&recallState, &buff[Offsets::ObjRecallState], sizeof(int));
+	memcpy(&currentGold, &buff[Offsets::ObjCurrentGold], sizeof(float));
+	memcpy(&totalGold, &buff[Offsets::ObjGoldTotal], sizeof(float));
+	memcpy(&attackRange, &buff[Offsets::ObjAtkRange], sizeof(float));
+
 	// Check if alive
 	DWORD spawnCount;
 	memcpy(&spawnCount, &buff[Offsets::ObjSpawnCount], sizeof(int));
