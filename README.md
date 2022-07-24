@@ -47,3 +47,16 @@ Dependencies:
  All LView & LView python scripts configurations reside in config.ini file. First you must set the path to the scripts folder with the following config (you can find the config.ini in LView folder):
  
   `::scriptsFolder=\<folder\>`
+
+## Optimized
+
+The release version of the TLoL-Scraper uses an optimized C++ implementation to scrape
+replay files which doubles the effective scraping speed over using the Python
+interface to save replay data. This is also the same version used in the YouTube
+guide. Switch the branch to the `optimized` branch if you want maximum performance
+when scraping replays. Use the following code to switch the branch:
+
+
+```bash
+git checkout optimized
+```
