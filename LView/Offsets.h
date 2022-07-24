@@ -11,19 +11,28 @@ public:
 
 	static int ObjIndex;
 	static int ObjTeam;
+	static int ObjMissileName; // Additional
 	static int ObjNetworkID;
 	static int ObjPos;
+	static int ObjMissileSpellCast; // Additional
 	static int ObjVisibility;
 	static int ObjSpawnCount;
 	static int ObjHealth;
 	static int ObjMaxHealth;
+	static int ObjAbilityHaste; // Additional
+	static int ObjLethality; // Additional
 	static int ObjMana;
+	static int ObjMaxMana; // Additional
+	static int ObjRecallState; // Additional
 	static int ObjArmor;
+	static int ObjBonusArmor; // Additional
 	static int ObjMagicRes;
+	static int ObjBonusMagicRes; // Additional
 	static int ObjBaseAtk;
 	static int ObjBonusAtk;
 	static int ObjMoveSpeed;
 	static int ObjSpellBook;
+	static int ObjTransformation; // Additional
 	static int ObjName;
 	static int ObjLvl;
 	static int ObjExpiry;
@@ -31,35 +40,33 @@ public:
 	static int ObjCritMulti;
 	static int ObjAbilityPower;
 	static int ObjAtkSpeedMulti;
+	static int ObjAtkRange; // Additional
+	static int ObjTargetable; // Additional
+	static int ObjInvulnerable; // Additional
+	static int ObjIsMoving; // Additional
+	static int ObjIsDashing; // Additional
+	static int ObjDirection; // Additional
 	static int ObjItemList;
-	static int ObjSrcIndex;
-
-	static int ObjMissileName;
-	static int ObjMissileSpellCast;
-	static int ObjMaxMana;
-	static int ObjRecallState;
-	static int ObjAbilityHaste;
-	static int ObjLethality;
-	static int ObjBonusArmor;
-	static int ObjBonusMagicRes;
-	static int ObjTransformation;
-	static int ObjAtkRange;
-	static int ObjExperience;
-	static int ObjMagicPen;
-	static int ObjMagicPenMulti;
-	static int ObjAdditionalApMulti;
-	static int ObjManaRegen;
-	static int ObjHealthRegen;
+	static int ObjExperience; // Additional
+	static int ObjMagicPen; // Additional
+	static int ObjMagicPenMulti; // Additional
+	static int ObjAdditionalApMulti; // Additional // 11.20
+	static int ObjManaRegen; // Additional
+	static int ObjHealthRegen; // Additional
 	static int ObjCurrentGold;
 	static int ObjGoldTotal;
-	static int ObjTargetable;
-	static int ObjInvulnerable;
-	static int ObjIsMoving;
-	static int ObjDirection;
+	static int ObjSrcIndex;
 
 	static int ItemListItem;
 	static int ItemInfo;
 	static int ItemInfoId;
+
+	static int CurrentDashSpeed; // Additional
+	static int IsDashing; // Additional
+	static int DashPos; // Additional
+	static int IsMoving; // Additional
+	static int NavBegin; // Additional
+	static int NavEnd; // Additional
 
 	static int ViewProjMatrices;
 	static int Renderer;
@@ -68,11 +75,15 @@ public:
 
 	static int SpellSlotLevel;
 	static int SpellSlotTime;
+	static int SpellSlotCharges; // Additional
+	static int SpellSlotTimeCharge; // Additional
 	static int SpellSlotDamage;
 	static int SpellSlotSpellInfo;
 	static int SpellInfoSpellData;
 	static int SpellDataSpellName;
 	static int SpellDataMissileName;
+	static int SpellSlotSmiteTimer; // Additional
+	static int SpellSlotSmiteCharges; // Additional
 
 	static int ObjectManager;
 	static int LocalPlayer;

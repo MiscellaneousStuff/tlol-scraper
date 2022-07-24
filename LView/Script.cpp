@@ -91,13 +91,15 @@ void Script::Load(const char * file)
 	}
 }
 
-void Script::ExecUpdate(const PyGame & state, const PyImguiInterface & ui)
+//void Script::ExecUpdate(const PyGame & state, const PyImguiInterface & ui)
+void Script::ExecUpdate(const PyGame& state)
 {
 	try {
 		if (NULL != updateFunc) {
 			high_resolution_clock::time_point beforeUpdate = high_resolution_clock::now();
 
-			call<void>(updateFunc, boost::ref(state), boost::ref(ui));
+			//call<void>(updateFunc, boost::ref(state), boost::ref(ui));
+			call<void>(updateFunc, boost::ref(state));
 
 			updateTimeMs = high_resolution_clock::now() - beforeUpdate;
 		}
@@ -107,11 +109,13 @@ void Script::ExecUpdate(const PyGame & state, const PyImguiInterface & ui)
 	}
 }
 
-void Script::ExecDrawSettings(const PyGame & state, const PyImguiInterface & ui)
+//void Script::ExecDrawSettings(const PyGame & state, const PyImguiInterface & ui)
+void Script::ExecDrawSettings(const PyGame & state)
 {
 	try {
 		if (NULL != drawSettingsFunc) {
-			call<void>(drawSettingsFunc, boost::ref(state), boost::ref(ui));
+			//call<void>(drawSettingsFunc, boost::ref(state), boost::ref(ui));
+			call<void>(drawSettingsFunc, boost::ref(state));
 		}
 	}
 	catch (error_already_set) {

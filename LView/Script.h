@@ -1,6 +1,6 @@
 #pragma once
 #include "PyGame.h"
-#include "PyImguiInterface.h"
+//#include "PyImguiInterface.h"
 #include "Python.h"
 #include "ConfigSet.h"
 #include <chrono>
@@ -12,8 +12,10 @@ class Script {
 
 public:
 	void Load(const char* file);
-	void ExecUpdate(const PyGame& state, const PyImguiInterface& ui);
-	void ExecDrawSettings(const PyGame& state, const PyImguiInterface& ui);
+	//void ExecUpdate(const PyGame& state, const PyImguiInterface& ui);
+	//void ExecDrawSettings(const PyGame& state, const PyImguiInterface& ui);
+	void ExecUpdate(const PyGame& state);
+	void ExecDrawSettings(const PyGame& state);
 	void ExecLoadCfg();
 	void ExecSaveCfg();
 

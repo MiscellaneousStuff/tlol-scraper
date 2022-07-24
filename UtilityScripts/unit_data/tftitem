@@ -1,0 +1,1 @@
+{"Characters/TFTItem/Skins/Meta": {"__type": "SkinCharacterMetaDataProperties"}, "Characters/TFTItem/CharacterRecords/Root": {"primaryAbilityResource": {"arAllowMaxValueToBeOverridden": true, "__type": "AbilityResourceSlotInfo"}, "selectionHeight": 120.0, "selectionRadius": 70.0, "flags": 41952512, "__type": "CharacterRecord"}}

@@ -9,7 +9,7 @@
 #include "PyGame.h"
 #include "ItemInfo.h"
 
-#include "PyImguiInterface.h"
+//#include "PyImguiInterface.h"
 #include "Utils.h"
 
 using namespace boost::python;
@@ -92,6 +92,21 @@ BOOST_PYTHON_MODULE(lview) {
 		.def_readonly("ap",                   &GameObject::abilityPower)
 		.def_readonly("atk_speed_multi",      &GameObject::atkSpeedMulti)
 		.def_readonly("team",                 &GameObject::team)
+		
+		// Additional
+		.def_readonly("ability_haste",        &GameObject::abilityHaste)
+		.def_readonly("lethality",            &GameObject::lethality)
+		.def_readonly("direction",            &GameObject::direction)
+		.def_readonly("experience",           &GameObject::experience)
+		.def_readonly("mana_regen",           &GameObject::manaRegen)
+		.def_readonly("health_regen",         &GameObject::healthRegen)
+		.def_readonly("max_mana",             &GameObject::maxMana)
+		.def_readonly("transformation",       &GameObject::transformation)
+		.def_readonly("is_moving",            &GameObject::isMoving)
+		// .def_readonly("is_dashing",           &GameObject::isDashing)
+		.def_readonly("targetable",           &GameObject::targetable)
+		.def_readonly("invulnerable",         &GameObject::invulnerable)
+		.def_readonly("recallState",          &GameObject::recallState)
 
 		.def_readonly("acquisition_radius",   &GameObject::GetAcquisitionRadius)
 		.def_readonly("selection_radius",     &GameObject::GetSelectionRadius)
@@ -231,6 +246,7 @@ BOOST_PYTHON_MODULE(lview) {
 		.def_readonly("type",               &MapObject::type)
 		;
 
+	/*
 	class_<PyImguiInterface>("UI")
 		.def("begin",                       &PyImguiInterface::Begin)
 		.def("end",                         &PyImguiInterface::End)
@@ -260,6 +276,7 @@ BOOST_PYTHON_MODULE(lview) {
 						                    
 		.def("listbox",                     &PyImguiInterface::ListBox)
 		;
+	*/
 
 	class_<ImVec4>("Color", init<float, float, float, float>())
 		.def_readonly("BLACK",              &Colors::BLACK)

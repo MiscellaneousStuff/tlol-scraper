@@ -267,6 +267,7 @@ public:
 		gs.localChampion = snapshot.player.get();
 		gs.map = snapshot.map.get();
 
+		/*
 		for (auto it = snapshot.champions.begin(); it != snapshot.champions.end(); ++it) {
 			gs.champs.append(boost::ref(**it));
 		}
@@ -285,6 +286,7 @@ public:
 		for (auto it = snapshot.others.begin(); it != snapshot.others.end(); ++it) {
 			gs.others.append(boost::ref(**it));
 		}
+		*/
 		return gs;
 	}
 };

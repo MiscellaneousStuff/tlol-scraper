@@ -191,7 +191,6 @@
     <ClCompile Include="Script.cpp" />
     <ClCompile Include="ScriptManager.cpp" />
     <ClCompile Include="Spell.cpp" />
-    <ClCompile Include="Overlay.cpp" />
     <ClCompile Include="SpellInfo.cpp" />
     <ClCompile Include="SpellInterface.h" />
     <ClCompile Include="Texture2D.cpp" />
@@ -228,7 +227,6 @@
     <ClInclude Include="Script.h" />
     <ClInclude Include="ScriptManager.h" />
     <ClInclude Include="Spell.h" />
-    <ClInclude Include="Overlay.h" />
     <ClInclude Include="SpellInfo.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="UnitInfo.h" />

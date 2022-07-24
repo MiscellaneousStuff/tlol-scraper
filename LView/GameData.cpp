@@ -3,7 +3,7 @@
 #include <fstream>
 #include <filesystem>
 #include "Utils.h"
-#include "Overlay.h"
+//#include "Overlay.h"
 
 using namespace std;
 
@@ -168,7 +168,8 @@ void GameData::LoadIcons(std::string& path)
 				printf("\r	Loading %d/%d      ", nrFile, nrFiles);
 
 			std::string filePath = folder + "/" + findData.cFileName;
-			Texture2D* image = Texture2D::LoadFromFile(Overlay::GetDxDevice(), filePath);
+			//Texture2D* image = Texture2D::LoadFromFile(Overlay::GetDxDevice(), filePath);
+			/*
 			if (image == nullptr)
 				printf("Failed to load: %s\n", filePath.c_str());
 			else {
@@ -176,6 +177,7 @@ void GameData::LoadIcons(std::string& path)
 				fileName.erase(fileName.find(".png"), 4);
 				Images[Character::ToLower(fileName)] = image;
 			}
+			*/
 		}
 		nrFile++;
 	} while (FindNextFileA(hFind, &findData));

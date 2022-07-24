@@ -118,6 +118,7 @@ void LeagueMemoryReader::ReadObjects(MemSnapshot& ms) {
 	int numMissiles, rootNode;
 	memcpy(&numMissiles, buff + Offsets::ObjectMapCount, sizeof(int));
 	memcpy(&rootNode, buff + Offsets::ObjectMapRoot, sizeof(int));
+	std::cout << "Num Missiles: " << numMissiles << ", Root Node: " << rootNode << "\n";
 
 	std::queue<int> nodesToVisit;
 	std::set<int> visitedNodes;
@@ -161,10 +162,14 @@ void LeagueMemoryReader::ReadObjects(MemSnapshot& ms) {
 		nrObj++;
 	}
 
+	std::cout << "nrObj: " << nrObj << "\n";
+
 	// Read objects from the pointers we just read
 	for (int i = 0; i < nrObj; ++i) {
 		int netId;
 		Mem::Read(hProcess, pointerArray[i] + Offsets::ObjNetworkID, &netId, sizeof(int));
+
+		// MOVE THIS BACK TO `1. THIS IS WHERE BLACKLISTED OBJS WAS`
 		if (blacklistedObjects.find(netId) != blacklistedObjects.end())
 			continue;
 
@@ -185,6 +190,8 @@ void LeagueMemoryReader::ReadObjects(MemSnapshot& ms) {
 			}
 		}
 
+		// std::cout << "Obj Name: " << obj->name << "\n
+
 		if (obj->isVisible) {
 			obj->lastVisibleAt = ms.gameTime;
 		}
@@ -192,6 +199,8 @@ void LeagueMemoryReader::ReadObjects(MemSnapshot& ms) {
 		if (obj->networkId != 0) {
 			ms.indexToNetId[obj->objectIndex] = obj->networkId;
 			ms.updatedThisFrame.insert(obj->networkId);
+
+			// std::cout << "CUR OBJ:" << obj->name << "\n";
 
 			if (obj->name.size() <= 2 || blacklistedObjectNames.find(obj->name) != blacklistedObjectNames.end())
 				blacklistedObjects.insert(obj->networkId);
@@ -207,6 +216,9 @@ void LeagueMemoryReader::ReadObjects(MemSnapshot& ms) {
 				ms.missiles.push_back(obj);
 			else
 				ms.others.push_back(obj);
+		}
+		else {
+			// std::cout << "CUR OBJ:" << obj->name << "\n";
 		}
 	}
 

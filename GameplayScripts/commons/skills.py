@@ -252,7 +252,7 @@ ChampionSpells = {
 	]
 }
 
-def draw_prediction_info(game, ui):
+def draw_prediction_info(game):
 	global ChampionSpells, Version
 	
 	ui.separator()

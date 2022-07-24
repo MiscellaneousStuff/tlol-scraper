@@ -16,7 +16,7 @@ class TargetingConfig:
 	target_minions = False
 	target_jungle  = False
 	
-	def draw(self, ui):
+	def draw(self):
 		ui.separator()
 		self.selected       = ui.listbox("Target", [str(target)[7:] for target in self.targets], self.selected)
 		self.target_jungle  = ui.checkbox("Allow targeting jungle monsters", self.target_jungle)

@@ -99,9 +99,6 @@
     <ClCompile Include="imgui_impl_dx11.cpp">
       <Filter>Source Files\External\imgui</Filter>
     </ClCompile>
-    <ClCompile Include="Overlay.cpp">
-      <Filter>Source Files\GUI</Filter>
-    </ClCompile>
     <ClCompile Include="Spell.cpp">
       <Filter>Source Files\Structs\GameRelated\Spells</Filter>
     </ClCompile>
@@ -193,9 +190,6 @@
     </ClInclude>
     <ClInclude Include="imgui_impl_dx11.h">
       <Filter>Source Files\External\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="Overlay.h">
-      <Filter>Source Files\GUI</Filter>
     </ClInclude>
     <ClInclude Include="Spell.h">
       <Filter>Source Files\Structs\GameRelated\Spells</Filter>

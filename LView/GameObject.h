@@ -82,7 +82,7 @@ public:
 	DWORD                 address;
 				          
 	UnitInfo*             unitInfo = GameData::UnknownUnit;
-	
+
 	// Additional
 	float				  abilityHaste;
 	float				  lethality;
