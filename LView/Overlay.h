@@ -12,7 +12,6 @@
 #include "imgui_impl_win32.h"
 
 #include <boost/python.hpp>
-#include "Python.h"
 
 #include "ConfigSet.h"
 #include "ScriptManager.h"
